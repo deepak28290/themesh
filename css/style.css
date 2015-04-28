@@ -629,7 +629,7 @@
 				}
 
 					.main.style3 .content > header {
-						margin-bottom: 2em;
+						margin-bottom: 0.1em;
 					}
 
 				.main.style3.primary {
@@ -811,7 +811,7 @@
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: #fff;
+		background: #10FFFfff;
 		background: rgba(255,255,255,0.95);
 		height: 3em;
 		line-height: 3em;
@@ -869,8 +869,9 @@
 /*********************************************************************************/
 
 	#intro {
-		background: url('images/overlay.png'), url('../images/intro.jpg');
+		background: url('images/overlay.png'), url('../images/123.jpg');
 		background-size: 256px 256px, cover;
+		
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
 		background-repeat: repeat, no-repeat;
