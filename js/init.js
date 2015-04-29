@@ -3,7 +3,67 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+ function validateEmail(email) 
+{
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+function subscribe(){
+	
+	var email=document.getElementById('email1');
+	var msg=document.getElementById('message1');
+	
+	
+	if(email.value == ""){
+	  swal("Oops...", "Please tell us your email address! We promise we won't share it with anyone else.", "error");
+	
+	}else if(validateEmail(email.value)==false){
+	  swal("Oops...", "Please enter a valid email address.", "error");
+	
+	}else{
+		var url="http://127.0.0.1:8080/svcProject/user/usersubscribe?emailid="+email.value+"&message="+msg.value;
+	
+		var xmlhttp;
 
+		if (window.XMLHttpRequest)
+  
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  
+  xmlhttp=new XMLHttpRequest();
+  
+  }
+
+  else
+  
+  {// code for IE6, IE5
+  
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  
+  }
+
+  xmlhttp.onreadystatechange=function()
+  
+  {
+  
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+		if(xmlhttp.responseText=="success"){
+		//	alert("Thanks for your response. We'll get back to you over email right away!")
+			 swal("Thank you!", "Thanks for showing interest in using Mesh. We'll get back to you over email right away!", "success");
+		}
+  
+  //document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+
+  }
+
+  }
+
+  xmlhttp.open("POST",url,true);
+
+  xmlhttp.send();
+
+  }
+	}
 (function($) {
 
 	skel.init({
