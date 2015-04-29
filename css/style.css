@@ -869,7 +869,7 @@
 /*********************************************************************************/
 
 	#intro {
-		background: url('images/overlay.png'), url('../images/123.jpg');
+		background: url('images/overlay.png'), url('../images/123.png');
 		background-size: 256px 256px, cover;
 		
 		background-attachment: fixed, fixed;
