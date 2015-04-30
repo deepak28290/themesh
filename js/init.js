@@ -15,10 +15,10 @@ function subscribe(){
 	
 	
 	if(email.value == ""){
-	  swal("Oops...", "Please tell us your email address! We promise we won't share it with anyone else.", "error");
+	  swal("No Cheating!", "Please tell us your email address! We promise we won't share it with anyone else.", "error");
 	
 	}else if(validateEmail(email.value)==false){
-	  swal("Oops...", "Please enter a valid email address.", "error");
+	  swal("No Cheating!", "Please enter a valid email address.", "error");
 	
 	}else{
 		var url="http://52.74.109.161:8080/svcProject/user/usersubscribe?emailid="+email.value+"&message="+msg.value;
@@ -49,7 +49,7 @@ function subscribe(){
     {
 		if(xmlhttp.responseText=="success"){
 		//	alert("Thanks for your response. We'll get back to you over email right away!")
-			 swal("Thank you!", "Thanks for showing interest in using Mesh. We'll get back to you over email right away!", "success");
+			 swal("Welcome Onboard!", "Thanks for showing interest in using Mesh. We'll get back to you over email with more details as we approach the big day!", "success");
 		}
   
   //document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
