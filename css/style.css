@@ -811,7 +811,7 @@
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: #10FFFfff;
+		background: #FFFfff;
 		background: rgba(255,255,255,0.95);
 		height: 3em;
 		line-height: 3em;
@@ -882,7 +882,8 @@
 /*********************************************************************************/
 
 	#one {
-		background: url('images/overlay.png'), url('../images/one.jpg');
+		/*background: url('images/overlay.png'), url('../images/one.jpg');*/
+		background-color:#FFFFFF;
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
