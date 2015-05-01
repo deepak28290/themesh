@@ -15,10 +15,10 @@ function subscribe(){
 	
 	
 	if(email.value == ""){
-	  swal("No Cheating!", "Please tell us your email address! We promise we won't share it with anyone else.", "error");
+	  swal("Oops...", "Please tell us your email address! We promise we won't share it with anyone else.", "error");
 	
 	}else if(validateEmail(email.value)==false){
-	  swal("No Cheating!", "Please enter a valid email address.", "error");
+	  swal("Oops...", "Please enter a valid email address.", "error");
 	
 	}else{
 		var url="http://52.74.109.161:8080/svcProject/user/usersubscribe?emailid="+email.value+"&message="+msg.value;
@@ -288,7 +288,7 @@ function subscribe(){
 
 						// Update scrolly links.
 							$('a[href^=#]').scrolly({
-								speed: 1500,
+								speed: 500,
 								offset: $header.outerHeight() - 1
 							});
 
